@@ -3,7 +3,7 @@
 /**
  * UuddoktaPay FOSSBilling Gateway Module
  *
- * Copyright (c) 2021 - 2023 UuddoktaPay
+ * Copyright (c) 2024 UuddoktaPay
  * Website: https://uddoktapay.com
  * Email: info@uddoktapay.com
  * Developer: UddoktaPay Team
@@ -100,7 +100,7 @@ class Payment_Adapter_UddoktaPay extends Payment_AdapterAbstract implements \FOS
 
             $tx_data = [
                 'id'            =>  $id,
-                'invoice_id'    =>  $response['metadata']['invoice_id'],
+                'invoice_id'    =>  $invoice->id,
                 'txn_status'    =>  $response['status'],
                 'txn_id'        =>  $response['transaction_id'],
                 'amount'        =>  $amount,
